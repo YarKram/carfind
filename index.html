@@ -9,29 +9,44 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<header style="position: fixed; width: 100%; top: 0">
+		<header>
 			<div class="container">
-				<nav
-					style="
-						display: flex;
-						align-items: center;
-						justify-content: space-around;
-					"
-				>
+				<div class="mobile__menu">
 					<img
 						src="./src/images/s-shine-one-lava-red.png"
 						alt="logo"
 						width="100px"
 						height="auto"
 					/>
-					<a href="#home">Home</a>
-					<a href="#about">About</a>
-					<a href="#services">Services</a>
+					<div class="burger">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
 
-					<a href="#benefits">Benefits</a>
-					<a href="#contact">Contact</a>
+				<nav>
+					<ul class="nav-list">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#benefits">Benefits</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-					<a class="contact__button" href="https://t.me/vvsalnykov">
+		<main>
+			<section class="home" id="home">
+				<div class="container">
+					<h2>Home</h2>
+					<p>Авто з США "Під ключ"</p>
+
+					<a
+						class="contact__button contact__button--header"
+						href="https://t.me/vvsalnykov"
+					>
 						<svg
 							class="icon"
 							xmlns="http://www.w3.org/2000/svg"
@@ -40,8 +55,6 @@
 							y="0px"
 							viewBox="0 0 300 300"
 							xml:space="preserve"
-							width="20px"
-							height="20px"
 						>
 							<path
 								d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412   c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22   c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207   c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146   c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z"
@@ -49,38 +62,10 @@
 						</svg>
 						Отримати консультацію</a
 					>
-				</nav>
-			</div>
-			<!-- <h1>Your Logo / Brand Name</h1> -->
-		</header>
-
-		<main>
-			<section
-				style="
-					display: flex;
-					justify-content: center;
-					flex-direction: column;
-					align-items: center;
-
-					background-image: url(./src/images/2022_Mirai_Limited_Oxygen_White_020_hero-600x400.png);
-					background-repeat: no-repeat;
-					background-position: center;
-					padding: 118px 20px;
-
-					background-size: cover;
-					max-width: -webkit-fill-available;
-					margin-top: 79px;
-				"
-				id="home"
-			>
-				<h2>Home</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam
-					ultricies libero, non rhoncus erat vestibulum at.
-				</p>
+				</div>
 			</section>
 			<section>
-				<div id="about" class="container">
+				<div id="about" class="container container__about">
 					<div
 						style="
 							display: flex;
@@ -229,10 +214,42 @@
 						aliquam ultricies libero, non rhoncus erat vestibulum at.
 					</p>
 					<ul class="services__list advantages">
-						<li>Фіксована ціна</li>
-						<li>Гарантований результат</li>
-						<li>Послуга "під ключ"</li>
-						<li>Економія часу</li>
+						<li>
+							<img
+								style="filter: invert(100%)"
+								width="30px"
+								height="auto"
+								src="./src/images/best-price.png"
+								alt="contact-us"
+							/>Фіксована ціна
+						</li>
+						<li>
+							<img
+								style="filter: invert(100%)"
+								width="30px"
+								height="auto"
+								src="./src/images/guarantee.png"
+								alt="contact-us"
+							/>Гарантований результат
+						</li>
+						<li>
+							<img
+								style="filter: invert(100%)"
+								width="30px"
+								height="auto"
+								src="./src/images/key-chain.png"
+								alt="contact-us"
+							/>Послуга "під ключ"
+						</li>
+						<li>
+							<img
+								style="filter: invert(100%)"
+								width="30px"
+								height="auto"
+								src="./src/images/save-time.png"
+								alt="contact-us"
+							/>Економія часу
+						</li>
 					</ul>
 				</div>
 			</section>
@@ -244,11 +261,8 @@
 						aliquam ultricies libero, non rhoncus erat vestibulum at.
 					</p>
 					<iframe
-						style="margin-bottom: 10px; border: none"
+						class="map"
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.2320540473315!2d30.58609777609357!3d50.52985418164385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d192d0c783fd%3A0x74f60c2b305bfaff!2zVEhFIFNISU5FINCU0JXQotCV0JnQm9CY0J3Qkw!5e0!3m2!1suk!2spl!4v1691063957488!5m2!1suk!2spl"
-						width="85%"
-						height="350px"
-						style="border: 0"
 						allowfullscreen=""
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
@@ -279,6 +293,8 @@
 		<footer style="width: 100%">
 			<p>&copy; 2023 S-Shine. All rights reserved.</p>
 		</footer>
+		<button id="myBtn" title="Go to top">↑</button>
+
 		<script src="script.js"></script>
 	</body>
 </html>
