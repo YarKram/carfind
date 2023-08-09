@@ -34,6 +34,11 @@ header {
 
 	justify-content: space-between;
 
+	img {
+		width: 100px;
+		height: auto;
+	}
+
 	@media only screen and (min-width: $tablet-breakpoint) {
 		justify-content: center;
 	}
@@ -256,6 +261,15 @@ p {
 	align-items: center;
 }
 
+.about__images {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	width: 50%;
+}
+
 .top-images,
 .bottom-images {
 	display: flex;
@@ -270,6 +284,15 @@ p {
 	margin: 20px 0 0 0;
 	padding: 0;
 	list-style-position: inside;
+	width: 100%;
+
+	@media only screen and (min-width: 481px) {
+		width: 80%;
+	}
+
+	@media only screen and (min-width: 769px) {
+		width: 60%;
+	}
 
 	li {
 		float: left;
@@ -283,7 +306,7 @@ p {
 		transition: opacity 0.5s;
 
 		img {
-			max-width: 30px;
+			width: 30px;
 			height: auto;
 		}
 
@@ -312,6 +335,11 @@ footer {
 }
 
 #myBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
 	position: fixed;
 	bottom: 20px;
 	right: 30px;
