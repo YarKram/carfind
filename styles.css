@@ -215,7 +215,12 @@ p {
 }
 
 .container__about {
-  flex-direction: row;
+  flex-direction: column;
+}
+@media only screen and (min-width: 480px) {
+  .container__about {
+    flex-direction: row;
+  }
 }
 
 .top-images,

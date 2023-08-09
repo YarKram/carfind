@@ -244,7 +244,10 @@ p {
 }
 
 .container__about {
-	flex-direction: row;
+	flex-direction: column;
+	@media only screen and (min-width: $mobile-breakpoint) {
+		flex-direction: row;
+	}
 }
 
 .top-images,
