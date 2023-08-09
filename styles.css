@@ -119,11 +119,10 @@ p {
   line-height: 1.6;
 }
 
-li,
 h1,
 h2,
 p {
-  margin: 0 0 20px 0s;
+  margin: 0 0 20px 0;
 }
 
 .home {
@@ -215,12 +214,18 @@ p {
 }
 
 .container__about {
-  flex-direction: column;
+  flex-direction: row;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .container__about {
-    flex-direction: row;
+    flex-direction: column;
   }
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top-images,
